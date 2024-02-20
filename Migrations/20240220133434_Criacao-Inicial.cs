@@ -34,7 +34,7 @@ namespace LojaDeHardware.Migrations
                     ClienteTel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClienteCPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClienteRua = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClientePais = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ClienteCidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClienteEstado = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClienteCEP = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

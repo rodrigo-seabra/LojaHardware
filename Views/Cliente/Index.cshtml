@@ -25,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.ClienteRua)
             </th>
             <th class="text-white">
-                @Html.DisplayNameFor(model => model.ClientePais)
+                @Html.DisplayNameFor(model => model.ClienteCidade)
             </th>
             <th class="text-white">
                 @Html.DisplayNameFor(model => model.ClienteEstado)
@@ -52,10 +52,10 @@
                     @Html.DisplayFor(modelItem => item.ClienteRua)
             </td>
                 <td class="text-white">
-                    @Html.DisplayFor(modelItem => item.ClientePais)
+                    @Html.DisplayFor(modelItem => item.ClienteCidade)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClienteEstado)
+                <td class="text-white">
+                    @Html.DisplayFor(modelItem => item.ClienteEstado)
             </td>
                 <td class="text-white">
                     @Html.DisplayFor(modelItem => item.ClienteCEP)

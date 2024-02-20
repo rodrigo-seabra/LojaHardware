@@ -70,10 +70,10 @@ namespace LojaDeHardware.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ClienteNome");
 
-                    b.Property<string>("ClientePais")
+                    b.Property<string>("ClienteCidade")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("ClientePais");
+                        .HasColumnName("ClienteCidade");
 
                     b.Property<string>("ClienteRua")
                         .IsRequired()

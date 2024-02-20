@@ -14,40 +14,41 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ClienteNome" class="control-label"></label>
-                <input asp-for="ClienteNome" class="form-control" />
+                <input asp-for="ClienteNome" class="form-control" id="ClienteNome" />
                 <span asp-validation-for="ClienteNome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ClienteTel" class="control-label"></label>
-                <input asp-for="ClienteTel" class="form-control" />
+                <input asp-for="ClienteTel" class="form-control" id="ClienteTelefone" />
                 <span asp-validation-for="ClienteTel" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CPFCliente" class="control-label"></label>
-                <input asp-for="CPFCliente" class="form-control" />
+                <input asp-for="CPFCliente" class="form-control" id="ClienteCpf" />
                 <span asp-validation-for="CPFCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ClienteRua" class="control-label"></label>
-                <input asp-for="ClienteRua" class="form-control" />
+                <input asp-for="ClienteRua" class="form-control" id="rua"/>
                 <span asp-validation-for="ClienteRua" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClientePais" class="control-label"></label>
-                <input asp-for="ClientePais" class="form-control" />
-                <span asp-validation-for="ClientePais" class="text-danger"></span>
+                <label asp-for="ClienteCidade" class="control-label"></label>
+                <input asp-for="ClienteCidade" class="form-control" id="cidade" />
+                <span asp-validation-for="ClienteCidade" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ClienteEstado" class="control-label"></label>
-                <input asp-for="ClienteEstado" class="form-control" />
+                <input asp-for="ClienteEstado" class="form-control" id="estado" />
                 <span asp-validation-for="ClienteEstado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteCEP" class="control-label"></label>
-                <input asp-for="ClienteCEP" class="form-control" />
-                <span asp-validation-for="ClienteCEP" class="text-danger"></span>
+                <div class="input-group mb-3 mt-3">
+                    <label asp-for="ClienteCEP" class="control-label m-3">CEP</label>
+                    <input asp-for="ClienteCEP" class="form-control" id="CEP" placeholder="CEP do salão" aria-label="CEP do salão" aria-describedby="button-addon2" size="10" maxlength="9" />
+                    <button class="btn btn-outline-warning" type="button" onclick="VerificarCep()" id="button-addon2">Verificar</button>
+                </div>
             </div>
-            <span asp-validation-for="ClienteCEP" class="text-danger"></span>
             <button type="submit" class="mt-4">
                 <span class="transition"></span>
                 <span class="gradient"></span>

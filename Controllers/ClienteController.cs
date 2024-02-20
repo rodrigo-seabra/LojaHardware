@@ -55,7 +55,7 @@ namespace LojaDeHardware.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClienteId,ClienteNome,ClienteTel,CPFCliente,ClienteRua,ClientePais,ClienteEstado,ClienteCEP")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("ClienteId,ClienteNome,ClienteTel,CPFCliente,ClienteRua,ClienteCidade,ClienteEstado,ClienteCEP")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace LojaDeHardware.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,ClienteNome,ClienteTel,CPFCliente,ClienteRua,ClientePais,ClienteEstado,ClienteCEP")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,ClienteNome,ClienteTel,CPFCliente,ClienteRua,ClienteCidade,ClienteEstado,ClienteCEP")] Cliente cliente)
         {
             if (id != cliente.ClienteId)
             {

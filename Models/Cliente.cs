@@ -26,9 +26,9 @@ namespace LojaDeHardware.Models
         [Display(Name = "Rua do cliente")]
         public string ClienteRua { get; set; } = string.Empty;
 
-        [Column("ClientePais")]
-        [Display(Name = "País do cliente")]
-        public string ClientePais { get; set; } = string.Empty;
+        [Column("ClienteCidade")]
+        [Display(Name = "Cidade do cliente")]
+        public string ClienteCidade { get; set; } = string.Empty;
 
         [Column("ClienteEstado")]
         [Display(Name = "Estado do cliente")]
