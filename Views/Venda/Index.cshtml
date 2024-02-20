@@ -1,0 +1,61 @@
+﻿@model IEnumerable<LojaDeHardware.Models.Venda>
+
+@{
+    ViewData["Title"] = "Venda";
+}
+
+<h1>Venda</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar</a>
+</p>
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VendaValorTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendaData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeioPagamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendaValorTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendaData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ClienteId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendedor.VendedorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeioPagamento.MeioPagamentoId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendaId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.VendaId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendaId">Excluir</a> |
+                <a asp-action="Imprimir" asp-route-id="@item.VendaId" target="_blank">Imprimir</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

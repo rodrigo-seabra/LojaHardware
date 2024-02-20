@@ -1,0 +1,44 @@
+﻿@model LojaDeHardware.Models.VendaHasProduto
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div class="text-white">
+    <hr />
+    <section class="row">
+        <div class="tipoprodutocss mt-4">
+            <h4 class="col-sm-2">
+                @Html.DisplayNameFor(model => model.VendaHasProdutoQtd):
+            </h4>
+            <h5 class="col-sm-10">
+                @Html.DisplayFor(model => model.VendaHasProdutoQtd)
+            </h5>
+        </div>
+
+        <div class="tipoprodutocss mt-4">
+            <h4 class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Venda):
+            </h4>
+            <h5 class="col-sm-10">
+                @Html.DisplayFor(model => model.Venda.VendaId)
+            </h5>
+        </div>
+
+        <div class="tipoprodutocss mt-4">
+            <h4 class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Produto):
+            </h4>
+            <h5 class="col-sm-10">
+                @Html.DisplayFor(model => model.Produto.ProdutoId)
+            </h5>
+        </div>
+
+    </section>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.VendaHasProdutoId">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

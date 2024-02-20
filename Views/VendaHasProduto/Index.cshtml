@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LojaDeHardware.Models.VendaHasProduto>
+
+@{
+    ViewData["Title"] = "Venda de produto";
+}
+
+<h1>Venda de produto</h1>
+
+<p>
+    <a asp-action="Create">Nova venda</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="text-white">
+            <th>
+                @Html.DisplayNameFor(model => model.VendaHasProdutoQtd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Venda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="text-white">
+            <td>
+                @Html.DisplayFor(modelItem => item.VendaHasProdutoQtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Venda.VendaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto.ProdutoId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendaHasProdutoId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.VendaHasProdutoId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendaHasProdutoId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

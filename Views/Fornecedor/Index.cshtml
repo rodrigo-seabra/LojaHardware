@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LojaDeHardware.Models.Fornecedor>
+
+@{
+    ViewData["Title"] = "Fornecedores";
+}
+
+<h1>Fornecedores</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.FornecedorCNPJ)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.FornecedorNome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td class="text-white">
+                @Html.DisplayFor(modelItem => item.FornecedorCNPJ)
+            </td>
+                <td class="text-white">
+                @Html.DisplayFor(modelItem => item.FornecedorNome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FornecedorId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.FornecedorId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.FornecedorId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+
+<div class="text-center">
+    <h1>Bem-Vindo!</h1>
+</div>
+<section>
+    <div class="card">
+        <a class="card1" href="https://localhost:7094/Fornecedor/Create">
+            <p>Cadastre um fornecedor</p>
+            <p class="small">Adicione mais um fornecedor dos produtos da loja.</p>
+            <div class="go-corner" href="#">
+                <div class="go-arrow">
+                    →
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a class="card1" href="https://localhost:7094/Venda/Create">
+            <p>Venda de produto</p>
+            <p class="small">Fez uma nova venda! Registre-a aqui.</p>
+            <div class="go-corner" href="#">
+                <div class="go-arrow">
+                    →
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a class="card1" href="https://localhost:7094/EntradaProduto/Create">
+            <p>Chegou mais produtos!</p>
+            <p class="small">Registre a chegada de novos produtos.</p>
+            <div class="go-corner" href="#">
+                <div class="go-arrow">
+                    →
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="card">
+        <a class="card1" href="https://localhost:7094/Cliente/Create">
+            <p>Cliente Novo</p>
+            <p class="small">Cadastre outro cliente! Adicione um novo cliente aqui!</p>
+            <div class="go-corner" href="#">
+                <div class="go-arrow">
+                    →
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="InfosAdd">
+    <div>
+        <h2>Adicionar novas informações</h2>
+    </div>
+    <div class="ContainerBtns">
+        <div>
+            <a class="button" href="https://localhost:7094/Categoria/Create">
+                <span class="button__text">Add Tipo de Produto </span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+            </a>
+        </div>
+        <div>
+            <a class="button" href="https://localhost:7094/Vendedor/Create">
+                <span class="button__text">Add Novo Vendedor </span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+            </a>
+        </div>
+        <div>
+            <a class="button" href="https://localhost:7094/MeioPagamento/Create">
+                <span class="button__text">Add Meio de Pagamento </span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+            </a>
+        </div>
+        <div>
+            <a class="button" href="https://localhost:7094/VendaHasProduto/Create">
+                <span class="button__text">Add Venda dos Produtos </span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+            </a>
+        </div>
+
+    </div>
+
+</section>

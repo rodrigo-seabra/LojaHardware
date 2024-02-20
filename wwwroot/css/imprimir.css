@@ -1,0 +1,118 @@
+﻿    background-color: #DDE5EB;
+}
+
+.geral {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    text-align:center
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.65rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #19DADA;
+}
+
+    .title img {
+        width: 200px;
+    }
+
+.exame-paciente {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.nome-pac {
+    color: #19DADA;
+    font-size: 2.5rem;
+}
+
+.table {
+    width: 568px;
+    height: 430px;
+    border: 2px solid #19DADA;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table td{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+dl {
+    width: 568px;
+    height: 430px;
+    border: 2px solid #19DADA;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    dl dt {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #19DADA;
+    }
+
+    dl dd {
+        font-size: 1.2rem;
+    }
+
+.infos-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    gap: 7px;
+    border-bottom: 2px solid black;
+}
+
+    .infos-name dd {
+        margin-right: 30px;
+    }
+
+    .infos-name dt {
+        margin-left: 30px;
+    }
+
+.resultado {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+    .resultado dt {
+        font-size: 1.8rem;
+    }
+
+    .resultado dd {
+        font-size: 1.4rem;
+        margin-right: 30px
+    }
+
+.data, .profissional {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+

@@ -1,0 +1,23 @@
+﻿@model LojaDeHardware.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhess</h1>
+
+<div>
+    <hr />
+    <section class="row">
+        <h4 class="col-sm-2 text-white">
+            @Html.DisplayNameFor(model => model.CategoriaNome):
+        </h4>
+        <h5 class="col-sm-10  text-white">
+            @Html.DisplayFor(model => model.CategoriaNome)
+        </h5>
+    </section>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CategoriaId">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

@@ -1,0 +1,70 @@
+﻿@model LojaDeHardware.Models.Venda
+@{
+    Layout = null; //para remover o footer e header
+}
+<link href="~/css/imprimir.css" rel="stylesheet" />
+
+<div class="geral">
+    <div class="exame-paciente">
+        <h2> Relatório de venda do: </h2>
+        <h3 class="nome-pac"> @Html.DisplayFor(model => model.Cliente.ClienteNome) </h3>
+    </div>
+    <div class="container">
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VendaValorTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VendaValorTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VendaData)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VendaData)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.ClienteNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vendedor.VendedorNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeioPagamento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeioPagamento.MeioPagamentoTipo)
+        </dd>
+    </dl>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <h3 class="nome-pac">Produtos da venda</h3>
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.ProdutosList)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Produto.ProdutoNome)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Quantidade
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
